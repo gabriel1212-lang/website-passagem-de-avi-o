@@ -1,0 +1,389 @@
+/* Reset básico e definição da fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+/* Cor de fundo do body */
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Container central com largura máxima */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* ---------------- Estilização do HEADER ---------------- */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Alinhamento interno do header */
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tamanho da logo */
+header .logo-img {
+    max-width: 40px;
+}
+
+/* Remove os marcadores da lista do menu */
+header .menu-desktop nav ul {
+    list-style-type: none;
+}
+
+/* Itens do menu alinhados em linha */
+header .menu-desktop nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+/* Links do menu */
+header .menu-desktop nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: 2s;
+}
+
+/* Efeito hover nos links do menu */
+.menu-desktop nav a:hover {
+    transform: scale(1.05);
+}
+
+/* Botões padrão do site */
+header .btn-contato button, .hero-site button, hoteis button {
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Hover nos botões */
+header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ---------------- Hero Section (banner principal) ---------------- */
+section.hero-site {
+    height: 98vh;
+    background-image: url(../website-responsivo/images/1817004-asa-de-aviao-atraves-de-uma-janela-gratis-foto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Centralização do conteúdo */
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Título principal */
+.hero-site .txt-hero h1 {
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+/* Destaque no título */
+.hero-site .txt-hero h1 span {
+    display: block;
+    font-weight: 800;
+}
+
+/* Parágrafo do banner */
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+/* Destaca parte do parágrafo */
+.hero-site .txt-hero p span {
+    display: block;
+}
+
+/* Botão do banner */
+hero-site button {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* ---------------- Seção VANTAGENS ---------------- */
+section.vantagens {
+    padding: 80px 0;
+}
+
+/* Layout das vantagens */
+.vantagens .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Imagem das vantagens */
+.vantagens .itens-container .img-itens img {
+    max-width: 420px;
+}
+
+/* Título das vantagens */
+.vantagens .itens-container .txt-itens h3 {
+    font-size: 3em;
+}
+
+/* Destaque dentro do título */
+.itens-container .txt-itens h3 span {
+    font-weight: 100;
+    display: inline-block;
+}
+
+/* ---------------- Seção CONTATO ---------------- */
+section.contato {
+    background-color: #dad0d0;
+    padding: 80px 0;
+}
+
+/* Layout de texto e ícones lado a lado */
+.txt-contato, .icons-contato {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+/* Título da seção de contato */
+.contato .txt-contato h3 {
+    font-size: 2.5em;
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+/* Link dos botões */
+.contato .icons-contao a {
+    text-decoration: none;
+}
+
+/* Estilo dos botões de contato */
+.contato .icons-contato button {
+    display: flex;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 60px;
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+/* Ícones nos botões */
+.contato .icons-contato button i {
+    font-size: 20px;
+}
+
+/* Hover nos botões de contato */
+.contato .icons-contato button:hover {
+    background-color: #000;
+}
+
+/* Cores dos ícones e textos ao passar o mouse */
+.contato .icons-contato button:hover i,
+.contato .icons-contato button:hover p {
+    color: #fff;
+}
+
+/* ---------------- Seção HOTEIS ---------------- */
+section.hoteis {
+    height: 600px;
+    background-image: url(../website-responsivo/images/pousada-quinta-dos-pinhais-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Overlay escura sobre a imagem */
+.hoteis .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000d7;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Conteúdo acima da overlay */
+.hoteis > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+}
+
+/* Título da seção */
+.hoteis h3 {
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.hoteis h3 span {
+    display: block;
+}
+
+/* Descrição da seção */
+.hoteis p {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Botão */
+.hoteis button {
+    width: 220px;
+    height: 60px;
+}
+
+/* Hover do botão */
+.hoteis .interface button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ---------------- Seção COMO FUNCIONA ---------------- */
+section.como-funciona {
+    padding: 80px 0;
+}
+
+/* Layout lado a lado */
+.txt-funciona, .instrucoes {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+/* Fixar o texto durante o scroll */
+.como-funciona .txt-funciona {
+    position: sticky;
+    top: 50%;
+}
+
+/* Título */
+.como-funciona .txt-funciona h3 {
+    font-size: 4em;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span {
+    display: block;
+    font-weight: 300;
+}
+
+/* Blocos com instruções */
+.instrucoes .instru-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+/* Imagens das instruções */
+.instrucoes .instru-box img {
+    max-width: 100px;
+}
+
+/* Título de cada instrução */
+.instrucoes .instru-box h4 {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Destaque */
+.instrucoes .instru-box h4 span {
+    font-weight: 300;
+}
+
+/* Texto das instruções */
+.instrucoes .instru-box p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Botões com ícones sociais */
+footer .top-footer button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .5s;
+}
+
+/* Hover nos botões sociais */
+footer .top-footer button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Links do meio do rodapé */
+footer .middle-footer a {
+    color: #fff;
+    margin: 0 20px;
+}
+
+/* Margem da seção do meio do footer */
+footer .middel-footer {
+    margin: 20px 0;
+}
